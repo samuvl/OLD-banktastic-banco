@@ -5,7 +5,7 @@ function EntidadBancariaService($http) {
     this.get = function (idEntidadBancaria) {
         var response = $http({
             method: "GET",
-            url: "/banco-api/api/entidadbancaria/" + idEntidadBancaria
+            url: "/banktastic-banco-api/api/entidadbancaria/" + idEntidadBancaria
         });
         return response;
     };
@@ -13,7 +13,7 @@ function EntidadBancariaService($http) {
     this.insert = function (entidadBancaria) {
         var response = $http({
             method: "POST",
-            url: "/banco-api/api/entidadbancaria",
+            url: "/banktastic-banco-api/api/entidadbancaria",
             data: entidadBancaria
         });
         return response;
@@ -22,7 +22,7 @@ function EntidadBancariaService($http) {
     this.update = function (entidadBancaria) {
         var response = $http({
             method: "PUT",
-            url: "/banco-api/api/entidadbancaria/" + entidadBancaria.idEntidadBancaria,
+            url: "/banktastic-banco-api/api/entidadbancaria/" + entidadBancaria.idEntidadBancaria,
             data: entidadBancaria
         });
         return response;
@@ -31,7 +31,7 @@ function EntidadBancariaService($http) {
     this.delete = function (idEntidadBancaria) {
         var response = $http({
             method: "DELETE",
-            url: "/banco-api/api/entidadbancaria/" + idEntidadBancaria
+            url: "/banktastic-banco-api/api/entidadbancaria/" + idEntidadBancaria
         });
         return response;
     };
@@ -39,7 +39,7 @@ function EntidadBancariaService($http) {
     this.find = function () {
         var response = $http({
             method: "GET",
-            url: "/banco-api/api/entidadbancaria"
+            url: "/banktastic-banco-api/api/entidadbancaria"
         });
         return response;
     };
@@ -47,7 +47,7 @@ function EntidadBancariaService($http) {
     this.findByNombre = function (nombre) {
         var response = $http({
             method: "GET",
-            url: "/banco-api/api/entidadbancaria/?nombre=" + nombre
+            url: "/banktastic-banco-api/api/entidadbancaria/?nombre=" + nombre
         });
         return response;
     };
