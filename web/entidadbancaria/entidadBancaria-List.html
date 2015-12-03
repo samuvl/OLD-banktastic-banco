@@ -1,0 +1,14 @@
+<table style="float: left">
+    <tr >
+        <td style="border-bottom: 1px solid; width: 50px"> ID </td>
+        <td style="text-align:center; border-bottom: 1px solid"> nombre </td>
+    </tr>
+
+    <tr ng-repeat="entidadBancaria in entidadesBancarias">
+        <td> <a href="#/get/{{entidadBancaria.idEntidadBancaria}}"> {{entidadBancaria.idEntidadBancaria}} </a></td>
+        <td> {{entidadBancaria.nombre}}</td>
+        <td> <a href="#/delete/{{entidadBancaria.idEntidadBancaria}}"> <button>Borrar</button></a></td>
+        <td> <a href="#/update/{{entidadBancaria.idEntidadBancaria}}" > <button>Actualizar</button></a></td>
+    </tr>
+</table>
+<br /> <br /><a href="#/main"> Volver </a>
