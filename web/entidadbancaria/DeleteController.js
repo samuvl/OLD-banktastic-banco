@@ -21,6 +21,7 @@ function DeleteController($scope, $routeParams, entidadBancariaService, $locatio
 
         response.success(function (data, status, headers, config) {
             alert("Borrado Con Éxito");
+            $location.url('/find');
         });
         response.error(function (data, status, headers, config) {
             alert("Error Borrando la entidad:  " + status);

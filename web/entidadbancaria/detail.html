@@ -1,10 +1,10 @@
 <!--<p>Id Entidad Bancaria: <input  type="text" name="idEntidadBancaria" ng-disabled="(tipo === 'UPDATE') || (tipo === 'INSERT') || (tipo === 'VIEW') || (tipo === 'DELETE')" ng-value="{{entidadBancaria.idEntidadBancaria}}"  /></p> -->
-<p>nombre: <input type="text" name="nombre" ng-model="entidadBancaria.nombre"ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE')" ng-value="{{entidadBancaria.nombre}}"/></p> 
-<p>Codigo Entidad: <input type="text" name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE')" ng-value="{{entidadBancaria.codigoEntidad}}"/></p>
-<p>Fecha de creacion: <input ui-date="{dateFormat:'dd/mm/yy'}" type="text" name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE')" ng-value="{{entidadBancaria.fechaCreacion}}"/></p>
+<p>nombre: <input type="text" name="nombre" ng-model="entidadBancaria.nombre"ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.nombre}}"/></p> 
+<p>Codigo Entidad: <input type="text" name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.codigoEntidad}}"/></p>
+<p>Fecha de creacion: <input ui-date="{dateFormat:'dd/mm/yy'}" type="text" name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.fechaCreacion}}"/></p>
 
-<p>Direccion: <input type="text" name="direccion" ng-model="entidadBancaria.direccion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE')" ng-value="{{entidadBancaria.direccion}}"/></p>
-<p>CIF: <input type="text" name="cif" ng-model="entidadBancaria.cif" ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE')" ng-value="{{entidadBancaria.cif}}"/></p>
+<p>Direccion: <input type="text" name="direccion" ng-model="entidadBancaria.direccion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.direccion}}"/></p>
+<p>CIF: <input type="text" name="cif" ng-model="entidadBancaria.cif" ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.cif}}"/></p>
 
 
 <ul>
@@ -12,7 +12,7 @@
 </ul>
     
     
-<input ng-click="ok()" type="submit" value="{{okBoton}}"/> <input ng-click="cancel()" type="submit" value="cancel"/><br><br>
+<input ng-click="ok()" type="submit" value="{{okBoton}}" ng-hide="tipo === 'GET'"/> <input ng-click="cancel()" type="submit" value="cancel"/><br><br>
 
 <br /> <br />
 <a href="#/main"> Inicio </a>

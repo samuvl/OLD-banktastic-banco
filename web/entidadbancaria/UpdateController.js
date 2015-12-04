@@ -1,5 +1,5 @@
-UpdateController.$inject = ['$scope', '$routeParams', 'entidadBancariaService', '$location'];
-function UpdateController($scope, $routeParams, entidadBancariaService, $location) {
+UpdateController.$inject = ['$scope', '$routeParams', 'entidadBancariaService', '$location', '$window'];
+function UpdateController($scope, $routeParams, entidadBancariaService, $location, $window) {
 
     $scope.entidadBancaria = {};
     $scope.entidadBancaria.idEntidadBancaria = $routeParams.idEntidadBancaria;
@@ -22,15 +22,8 @@ function UpdateController($scope, $routeParams, entidadBancariaService, $locatio
         var response = entidadBancariaService.update($scope.entidadBancaria);
 
         response.success(function (data, status, headers, config) {
-            alert("Actualizado con Éxito la Entidad Bancaria: " + $scope.entidadBancaria.idEntidadBancaria);
-            //Volver a cargar la entidad
-//            var response1 = entidadBancariaService.get($routeParams.idEntidadBancaria);
-//            response1.success(function (data, status, headers, config) {
-//                $scope.entidadBancaria = data;
-//            });
-//            response1.error(function (data, status, headers, config) {
-//                alert("Ha fallado la petición. Estado HTTP:" + status);
-//            });
+            alert("Actualizado con Éxito la Entidad Bancaria: " + $scope.entidadBancaria.idEntidadBancaria) + "\n Recargando...";
+            $window.location.reload();
         });
         response.error(function (data, status, headers, config) {
             if (status === 500) {

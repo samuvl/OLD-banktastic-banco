@@ -1,5 +1,5 @@
-InsertController.$inject = ['$scope', 'entidadBancariaService', '$location'];
-function InsertController($scope, entidadBancariaService, $location) {
+InsertController.$inject = ['$scope', 'entidadBancariaService', '$location', '$window'];
+function InsertController($scope, entidadBancariaService, $location, $window) {
     $scope.tipo = "INSERT";
     $scope.okBoton = "Insertar";
     $scope.entidadBancaria = {};
@@ -10,6 +10,7 @@ function InsertController($scope, entidadBancariaService, $location) {
 
         response.success(function (data, status, headers, config) {
             alert("Entidad Insertada con Éxito con el nombre: " + $scope.entidadBancaria.nombre);
+            $window.location.reload();
         });
 
         response.error(function (data, status, headers, config) {
