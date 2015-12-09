@@ -1,5 +1,5 @@
 <!--<p>Id Entidad Bancaria: <input  type="text" name="idEntidadBancaria" ng-disabled="(tipo === 'UPDATE') || (tipo === 'INSERT') || (tipo === 'VIEW') || (tipo === 'DELETE')" ng-value="{{entidadBancaria.idEntidadBancaria}}"  /></p> -->
-<p>nombre: <input type="text" name="nombre" ng-model="entidadBancaria.nombre"ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.nombre}}"/></p> 
+<!--<p>nombre: <input type="text" name="nombre" ng-model="entidadBancaria.nombre"ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.nombre}}"/></p> 
 <p>Codigo Entidad: <input type="text" name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.codigoEntidad}}"/></p>
 <p>Fecha de creacion: <input ui-date="{dateFormat:'dd/mm/yy'}" type="text" name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.fechaCreacion}}"/></p>
 
@@ -15,4 +15,38 @@
 <input ng-click="ok()" type="submit" value="{{okBoton}}" ng-hide="tipo === 'GET'"/> <input ng-click="cancel()" type="submit" value="cancel"/><br><br>
 
 <br /> <br />
-<a href="#/main"> Inicio </a>
+<a href="#/main"> Inicio </a>-->
+
+<div class="col-md-4 col-md-offset-4">
+<form role="form">
+  
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" name="nombre" class="form-control" placeholder="Nombre de la entidad" ng-model="entidadBancaria.nombre"ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.nombre}}">
+    </div>
+  
+    <div class="form-group">
+        <label>Codigo Entidad</label>
+        <input type="text" class="form-control" placeholder="Codigo de la entidad" name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.codigoEntidad}}">
+    </div>
+  
+    <div class="form-group">
+        <label>Fecha de creacion:</label>
+        <input ui-date="{dateFormat:'dd/mm/yy'}" type="text" class="form-control" placeholder="Fecha de creacion"  name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.fechaCreacion}}">
+    </div>
+    
+    <div class="form-group">
+        <label>Direccion:</label>
+        <input type="text" class="form-control" placeholder="Direccion" name="direccion" ng-model="entidadBancaria.direccion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.direccion}}"/>
+    </div>
+    
+    <div class="form-group">
+        <label>CIF:</label>
+        <input type="text" class="form-control" placeholder="cif" name="cif" ng-model="entidadBancaria.cif" ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.cif}}"/>
+    </div>
+  
+  <input ng-click="ok()" type="submit" value="{{okBoton}}"/> <input ng-click="cancel()" type="submit" value="cancel"/><br><br>
+</form>
+    
+    <div  class="alert alert-danger" ng-repeat="businessMessage in businessMessages"> {{businessMessage.fieldName}}: {{businessMessage.mensaje}}</div>
+</div>

@@ -1,0 +1,118 @@
+<html ng-app="app">
+    <head>
+        <title>Banktastic</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="./lib/jquery/jquery-2.1.4.js" type="text/javascript"></script>
+
+        <!-- fuentes -->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+        <style>
+
+            @keyframes
+            fadeOut {
+                from {
+
+                    filter: blur(6px);
+
+                }
+
+                to {
+
+                    filter: blur(0px);
+                }
+
+            }
+
+            body {
+                text-align: center;
+                background-image: url('./site/images/germany_sunset.jpg');
+                background-repeat: no-repeat;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            h1{
+
+                color: white;
+                opacity: 0.8;
+                animation-duration: 2s;
+                animation-delay: 0s;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                animation-name: fadeOut;
+
+            }
+
+            h3{
+
+                color: white;
+                opacity: 0.8;
+
+            }
+
+
+            #container {
+                margin-top: 150px;
+
+
+            }
+
+            #capaLogin {
+
+                border-radius: 15px;
+                margin-top: 80px;
+                background-color: #000;
+                padding: 0 0 30px 0;
+                opacity: 0.7;
+            }
+
+            #capaLogin:hover{
+                opacity: 0.9;
+
+            }
+
+            span{
+
+                margin-right: 10px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="container" class="container">
+            <h1>WELCOME TO BANKTASTIC</h1>
+            <div id="capa" class="col-md-12 col-xs-12">
+
+                <div class="col-md-4"></div>
+                <div id="capaLogin" class="col-md-4 col-xs-12">
+                    <h3>LOGIN</h3>
+                    <br>
+                    <p>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <input type="text" placeholder="Usuario">
+                    </p>
+                    <br>
+                    <p>
+                        <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                        <input type="password" placeholder="Contraseña"/>
+                    </p>
+                    <br>
+                    <button class="btn btn-primary" onclick="location.href = 'index.html'">
+                        entrar
+                    </button>
+                </div>
+                <div class="col-md-4"> </div>
+            </div>
+        </div>
+
+        <!-- JQUERY -->
+        <script src="./lib/jquery/jquery-2.1.4.min.js"></script>
+        <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
