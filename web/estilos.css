@@ -16,24 +16,18 @@ footer{
     text-align: center;
 }
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img{
-    width: 100%;
-}
-
-#carousel{
-    width: 100%;
-    margin-top: -100px;
-}
-
-.liSlider {
-    background-color: orange;
-}
-
-.h1Slider{
-    color: grey;    
-}
-
 .navbar-fixed-top {
     background-color: #0C816A !important;
+
+}
+
+footer{
+    color: white;
+}
+a{
+    color: white !important;
+}
+
+a:hover{
+    color: darkgray !important;
 }

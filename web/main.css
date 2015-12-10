@@ -1,0 +1,19 @@
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img{
+    width: 100%;
+}
+
+#carousel{
+    width: 100%;
+    height: auto;
+}
+
+.liSlider {
+    background-color: orange;
+}
+
+.h1Slider{
+    font-size: 60px;
+    color: #0C816A;    
+}

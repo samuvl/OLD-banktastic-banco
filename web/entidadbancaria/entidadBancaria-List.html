@@ -1,22 +1,22 @@
 <div class="col-md-4 col-md-offset-4">
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Borrar</th>
-            <th>Actualizar</th>
+    <table class="table table-striped">
+        <thead>
+            <tr class="success">
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Borrar</th>
+                <th>Actualizar</th>
             </tr>
-    </thead>
-            
-    <tbody>
-        <tr ng-repeat="entidadBancaria in entidadesBancarias">
-            <td> <a href="#/get/{{entidadBancaria.idEntidadBancaria}}"> {{entidadBancaria.idEntidadBancaria}} </a></td>
-            <td> {{entidadBancaria.nombre}}</td>
-            <td> <a href="#/delete/{{entidadBancaria.idEntidadBancaria}}"> <button class="btn btn-sm btn-danger">Borrar</button></a></td>
-            <td> <a href="#/update/{{entidadBancaria.idEntidadBancaria}}" > <button class="btn btn-sm btn-primary">Actualizar</button></a></td>
-        </tr>
-    </tbody>
-</table>
-    
+        </thead>
+
+        <tbody  >
+            <tr  ng-repeat="entidadBancaria in entidadesBancarias">
+                <td> <a href="#/get/{{entidadBancaria.idEntidadBancaria}}"> {{entidadBancaria.idEntidadBancaria}} </a></td>
+                <td> {{entidadBancaria.nombre}}</td>
+                <td> <a href="#/delete/{{entidadBancaria.idEntidadBancaria}}"> <button class="btn btn-sm btn-danger">Borrar</button></a></td>
+                <td> <a href="#/update/{{entidadBancaria.idEntidadBancaria}}" > <button class="btn btn-sm btn-primary">Actualizar</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+
 </div>
