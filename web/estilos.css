@@ -24,15 +24,15 @@ footer{
 footer{
     color: white;
 }
+/* Barra Navegación Letra Blancas */
+.navbar-inverse .navbar-brand{
+    color: white;
+}
 
-a{
+.navbar-inverse .navbar-nav>li>a{
     color: white !important;
 }
 
-a:hover{
+.navbar-inverse .navbar-nav>li>a:hover{
     color: darkgray !important;
-}
-
-a.ui-state-default{
-    color: #454545;
 }
