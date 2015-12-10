@@ -12,17 +12,17 @@
     </div>
   
     <div class="form-group">
-        <label>Fecha de creacion:</label>
+        <label>Fecha de creacion</label>
         <input ui-date="{dateFormat:'dd/mm/yy'}" type="text" class="form-control" placeholder="Fecha de creacion"  name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.fechaCreacion}}">
     </div>
     
     <div class="form-group">
-        <label>Direccion:</label>
+        <label>Direccion</label>
         <input type="text" class="form-control" placeholder="Direccion" name="direccion" ng-model="entidadBancaria.direccion"ng-disabled="  (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.direccion}}"/>
     </div>
     
     <div class="form-group">
-        <label>CIF:</label>
+        <label>CIF</label>
         <input type="text" class="form-control" placeholder="cif" name="cif" ng-model="entidadBancaria.cif" ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{entidadBancaria.cif}}"/>
     </div>
   
