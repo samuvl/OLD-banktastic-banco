@@ -24,10 +24,15 @@ footer{
 footer{
     color: white;
 }
+
 a{
     color: white !important;
 }
 
 a:hover{
     color: darkgray !important;
+}
+
+a.ui-state-default{
+    color: #454545;
 }
