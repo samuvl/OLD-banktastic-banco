@@ -7,4 +7,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             redirectTo: '/'
         });
 
+
+        $routeProvider.when('/login/', {
+            templateUrl: "login.html",
+            controller: "loginController"
+        });
+
     }]);
