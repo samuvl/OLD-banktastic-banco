@@ -55,4 +55,4 @@
 //
 //}
 //
-//app.service("entidadBancariaService", EntidadBancariaService);
+//app.service("usuarioService", UsuarioService);
