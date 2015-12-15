@@ -4,14 +4,12 @@ function InsertUserController($scope, usuarioService, $location, $window) {
     $scope.tipo = "INSERT";
     $scope.okBoton = "Insertar";
     $scope.usuario = {};
-    $scope.myEnumData=[{id:"1",text:"usuario"},{id:"2",text:"administrador"}];
-    $scope.item1 = {myvalue: "1"};
-    $scope.item2 = {myvalue: "1"};
+    $scope.myEnumData=[{id:"usuario",text:"usuario"},{id:"administrador",text:"administrador"}];
     
     $scope.ok = function () {
 
         var response = usuarioService.insert($scope.usuario);
-
+        
         response.success(function (data, status, headers, config) {
             alert("Usuario Insertado con Éxito con el nombre: " + $scope.usuario.nombre);
             $window.location.reload();
