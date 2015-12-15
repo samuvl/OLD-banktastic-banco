@@ -4,7 +4,6 @@ function InsertUserController($scope, usuarioService, $location, $window) {
     $scope.tipo = "INSERT";
     $scope.okBoton = "Insertar";
     $scope.usuario = {};
-    $scope.myEnumData=[{id:"usuario",text:"usuario"},{id:"administrador",text:"administrador"}];
     
     $scope.ok = function () {
 

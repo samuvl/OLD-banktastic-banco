@@ -18,21 +18,11 @@
 
         <div class="form-group">
             <label>Rol</label> <br />
-           <!--<input type="text" class="form-control" placeholder="Rol" name="rol" ng- model="usuario.rol" ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{usuario.rol}}"/>
-           --><select name="rol" ng-model="usuario.rol">
+            <select name="rol" ng-model="usuario.rol" ng-disabled=" (tipo === 'VIEW') || (tipo === 'DELETE') || (tipo === 'GET')" ng-value="{{usuario.rol}}">
                 <option value="administrador">Administrador</option>
                 <option value="usuario">Usuario</option>
             </select>
-        <!-- <table>
-            <tr>
-                <td ng-repeat="enumItem in myEnumData">
-                    <label class="radioGroupLabel" >
-                        <input type="radio" ng-model="usuario.rol" value="{{enumItem.id}}" />
-                        <span>{{enumItem.text}}</span>
-                    </label>
-                </td>
-            </tr>
-      </table>-->
+
         </div>
 
         <input ng-click="ok()" class="btn btn-sm btn-primary" type="submit" value="{{okBoton}}"/> <input ng-click="cancel()" class="btn btn-sm btn-danger" type="submit" value="cancel"/><br><br>
