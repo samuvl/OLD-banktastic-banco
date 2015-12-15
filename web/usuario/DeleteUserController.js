@@ -1,12 +1,12 @@
-DeleteUserController.$inject = ['$scope', '$routeParams', 'UsuarioService', '$location'];
+DeleteUserController.$inject = ['$scope', '$routeParams', 'usuarioService', '$location'];
 
-function DeleteUserController($scope, $routeParams, UsuarioService, $location) {
+function DeleteUserController($scope, $routeParams, usuarioService, $location) {
     $scope.usuario = {};
     $scope.idUsuario = $routeParams.idUsuario;
     $scope.tipo = "DELETE";
     $scope.okBoton = "Borrar";
 
-    var response = UsuarioService.get($routeParams.idUsuario);
+    var response = usuarioService.get($routeParams.idUsuario);
         response.success(function (data, status, headers, config) {
             $scope.usuario = data;
         });
@@ -17,7 +17,7 @@ function DeleteUserController($scope, $routeParams, UsuarioService, $location) {
 
     $scope.ok = function () {
 
-        var response = UsuarioService.delete($routeParams.idUsuario);
+        var response = usuarioService.delete($routeParams.idUsuario);
 
         response.success(function (data, status, headers, config) {
             alert("Borrado Con Éxito");

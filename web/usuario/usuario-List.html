@@ -11,10 +11,10 @@
 
         <tbody  >
             <tr  ng-repeat="usuario in usuarios">
-                <td> <a href="#/get/{{usuario.idUsuario}}"> {{usuario.idUsuario}} </a></td>
+                <td> <a href="#/getUser/{{usuario.idUsuario}}"> {{usuario.idUsuario}} </a></td>
                 <td> {{usuario.nombre}}</td>
-                <td> <a href="#/delete/{{usuario.idUsuario}}"> <button class="btn btn-sm btn-danger">Borrar</button></a></td>
-                <td> <a href="#/update/{{usuario.idUsuario}}" > <button class="btn btn-sm btn-primary">Actualizar</button></a></td>
+                <td> <a href="#/deleteUser/{{usuario.idUsuario}}"> <button class="btn btn-sm btn-danger">Borrar</button></a></td>
+                <td> <a href="#/updateUser/{{usuario.idUsuario}}" > <button class="btn btn-sm btn-primary">Actualizar</button></a></td>
             </tr>
         </tbody>
     </table>

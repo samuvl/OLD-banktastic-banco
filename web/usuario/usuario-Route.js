@@ -5,11 +5,11 @@ app.config(['$routeProvider', function ($routeProvider) {
         });
 
         $routeProvider.when('/findUser/:nombre', {
-            templateUrl: "usuario/entidadBancaria-List.html",
+            templateUrl: "usuario/usuario-List.html",
             controller: "FindUserController"
         });
 
-        $routeProvider.when('/getUser/:idEntidadBancaria', {
+        $routeProvider.when('/getUser/:idUsuario', {
             templateUrl: "usuario/detail.html",
             controller: "GetUserController"
         });
